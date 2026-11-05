@@ -1,0 +1,82 @@
+/* Musztarda: ciepły, musztardowy jasny wygląd claude.ai (styl dla rozszerzenia Stylus).
+   Działa zawsze w jasnej wersji, także gdy w Claude wybrany jest tryb ciemny.
+   Kontrast każdej pary tekst/tło wynosi co najmniej 4.5:1. */
+
+html,
+html[data-mode],
+html[data-mode] body,
+html[data-theme],
+html[data-theme] body {
+  color-scheme: light !important;
+
+  /* Tła */
+  --bg-000: 41.3 40.0% 92.2% !important;   /* #f3eee3: pole wiadomości, karty */
+  --bg-100: 42.0 55.6% 96.5% !important;   /* #fbf8f1: tło aplikacji */
+  --bg-200: 41.3 40.0% 92.2% !important;   /* #f3eee3: panel boczny */
+  --bg-300: 46.2 68.6% 86.3% !important;   /* #f4e9c4: najechanie myszą */
+  --bg-400: 46.2 68.6% 86.3% !important;   /* #f4e9c4: zaznaczenie, aktywny element */
+  --bg-500: 40.8 38.5% 87.3% !important;   /* #ebe3d2: wciśnięcie */
+
+  /* Tekst */
+  --text-000: 40.0 27.3% 12.9% !important; /* #2a2418 */
+  --text-100: 40.0 27.3% 12.9% !important;
+  --text-200: 40.0 27.3% 12.9% !important;
+  --text-300: 37.5 13.2% 35.7% !important; /* #675e4f: daty, podpisy */
+  --text-400: 37.5 13.2% 35.7% !important;
+  --text-500: 37.5 13.2% 35.7% !important;
+
+  /* Linie i obramowania */
+  --border-100: 39.3 27.6% 79.4% !important; /* #d9cfbc */
+  --border-200: 39.3 27.6% 79.4% !important;
+  --border-300: 39.3 27.6% 79.4% !important;
+  --border-400: 39.3 27.6% 79.4% !important;
+
+  /* Akcent (przycisk wysyłania), zawsze z ciemnym tekstem */
+  --accent-brand: 46.4 65.3% 61.6% !important;     /* #ddc05d */
+  --accent-main-000: 46.2 60.5% 56.3% !important;  /* #d3b44c: najechanie */
+  --accent-main-100: 46.4 65.3% 61.6% !important;  /* #ddc05d */
+  --accent-main-200: 46.4 65.3% 61.6% !important;
+  --accent-main-900: 46.2 68.6% 86.3% !important;  /* #f4e9c4 */
+  --oncolor-100: 40.0 27.3% 12.9% !important;      /* #2a2418 na akcencie */
+  --oncolor-200: 40.0 27.3% 12.9% !important;
+  --oncolor-300: 40.0 27.3% 12.9% !important;
+
+  /* Linki i obwódka fokusu */
+  --accent-secondary-000: 45.1 77.3% 27.6% !important; /* #7d6210 */
+  --accent-secondary-100: 45.1 77.3% 27.6% !important;
+  --accent-secondary-200: 45.1 77.3% 27.6% !important;
+  --accent-secondary-900: 46.2 68.6% 86.3% !important;
+
+  /* Komunikaty o błędach i sukcesie, przyciemnione dla kontrastu */
+  --danger-000: 350.9 58.6% 39.8% !important;  /* #a12a3c */
+  --danger-100: 350.9 58.6% 39.8% !important;
+  --danger-200: 350.9 58.6% 39.8% !important;
+  --success-000: 130.0 47.8% 27.1% !important; /* #24662f */
+  --success-100: 130.0 47.8% 27.1% !important;
+}
+
+/* Gdyby któraś część strony nie korzystała ze zmiennych: */
+html body {
+  background-color: #fbf8f1 !important;
+  color: #2a2418 !important;
+}
+
+/* Linki w odpowiedziach */
+.font-claude-message a,
+.font-claude-response a,
+.prose a {
+  color: #7d6210 !important;
+  text-decoration-color: #7d6210 !important;
+}
+
+/* Obwódka fokusu przy nawigacji klawiaturą */
+:focus-visible {
+  outline: 2px solid #7d6210 !important;
+  outline-offset: 2px !important;
+}
+
+/* Zaznaczony tekst */
+::selection {
+  background: #f4e9c4 !important;
+  color: #2a2418 !important;
+}
