@@ -1,0 +1,5 @@
+{
+  "name": "musztarda",
+  "owner": { "name": "skocz-hub" },
+  "plugins": [{ "name": "musztarda", "source": "./" }]
+}
