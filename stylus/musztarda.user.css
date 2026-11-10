@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         Musztarda dla claude.ai
 @namespace    github.com/skocz-hub/Musztarda
-@version      1.1.0
+@version      1.1.1
 @description  Ciepły, musztardowy jasny wygląd claude.ai: kremowe tło, beżowe panele, musztardowy akcent, kontrast tekstu co najmniej 4.5:1.
 @author       skocz-hub
 @homepageURL  https://github.com/skocz-hub/Musztarda
@@ -113,8 +113,9 @@
     text-decoration-color: #7d6210 !important;
   }
 
-  /* Obwódka fokusu przy nawigacji klawiaturą */
-  :focus-visible {
+  /* Obwódka fokusu przy nawigacji klawiaturą: tylko przyciski i linki.
+     Pole wiadomości ma własną, jedną cienką ramkę. */
+  :is(a, button, summary, [role="button"], [role="tab"], [role="menuitem"], [role="option"], [role="switch"], [role="checkbox"]):focus-visible {
     outline: 2px solid #7d6210 !important;
     outline-offset: 2px !important;
   }
