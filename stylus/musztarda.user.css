@@ -1,0 +1,127 @@
+/* ==UserStyle==
+@name         Musztarda dla claude.ai
+@namespace    github.com/skocz-hub/Musztarda
+@version      1.1.0
+@description  Ciepły, musztardowy jasny wygląd claude.ai: kremowe tło, beżowe panele, musztardowy akcent, kontrast tekstu co najmniej 4.5:1.
+@author       skocz-hub
+@homepageURL  https://github.com/skocz-hub/Musztarda
+@updateURL    https://raw.githubusercontent.com/skocz-hub/Musztarda/main/stylus/musztarda.user.css
+==/UserStyle== */
+
+@-moz-document domain("claude.ai") {
+  /* Nowy system kolorów claude.ai (nazwy --cds-*) */
+  html.cds-root,
+  html .cds-root:not(.cds-dark-scope),
+  html #static-composer,
+  html #static-composer-box,
+  html #static-sidebar-skeleton {
+    color-scheme: light !important;
+
+    /* Tła */
+    --cds-page-bg: #fbf8f1 !important;
+    --cds-surface-0: #f3eee3 !important;
+    --cds-surface-1: #fbf8f1 !important;
+    --cds-surface-2: #f3eee3 !important;
+    --cds-surface-3: #f3eee3 !important;
+    --cds-surface-panel: #f3eee3 !important;
+    --cds-surface-popover: #f3eee3 !important;
+    --cds-fizzy-lake-color-sidebar: #f3eee3 !important;
+    --cds-fizzy-lake-color-card-hover: #f4e9c4 !important;
+
+    /* Podświetlenie: najechanie myszą i zaznaczenie */
+    --cds-fill-ghost-hover: #f4e9c4 !important;
+    --cds-fill-ghost-selected: #f4e9c4 !important;
+    --cds-fill-button-ghost-hover: #f4e9c4 !important;
+    --cds-fizzy-lake-color-selected-hover: #f4e9c4 !important;
+    --cds-bg-neutral-hover: #f4e9c4 !important;
+    --cds-fill-secondary: #ebe3d2 !important;
+    --cds-fill-secondary-hover: #f4e9c4 !important;
+    --cds-bg-accent: #f4e9c4 !important;
+    --cds-bg-accent-layer: #f4e9c4 !important;
+
+    /* Akcent (przycisk wysyłania, aktywne elementy), zawsze z ciemnym tekstem */
+    --cds-fill-primary: #ddc05d !important;
+    --cds-fill-primary-hover: #d3b44c !important;
+    --cds-on-primary: #2a2418 !important;
+    --cds-fill-accent: #ddc05d !important;
+    --cds-fill-accent-hover: #d3b44c !important;
+    --cds-on-accent: #2a2418 !important;
+
+    /* Tekst */
+    --cds-text-primary: #2a2418 !important;
+    --cds-fizzy-lake-color-solid-primary: #2a2418 !important;
+    --cds-text-secondary: #675e4f !important;
+    --cds-text-muted: #675e4f !important;
+    --cds-text-stays-secondary: #675e4f !important;
+    --cds-fizzy-lake-color-secondary: #675e4f !important;
+    --cds-fizzy-lake-color-tertiary: #675e4f !important;
+    --cds-fizzy-lake-color-plain-secondary: #675e4f !important;
+    --cds-fizzy-lake-color-plain-muted: #675e4f !important;
+    --cds-fizzy-lake-color-solid-secondary: #675e4f !important;
+    --cds-fizzy-lake-color-solid-muted: #675e4f !important;
+    --cds-fizzy-lake-color-placeholder: #675e4f !important;
+
+    /* Linki */
+    --cds-text-accent: #7d6210 !important;
+
+    /* Linie i obramowania */
+    --cds-border: #d9cfbc !important;
+    --cds-border-line: #d9cfbc !important;
+    --cds-border-strong: #c9bda6 !important;
+    --cds-ring-color: #d9cfbc !important;
+    --cds-alpha-2: #d9cfbc !important;
+    --cds-alpha-3: #c9bda6 !important;
+    --cds-fizzy-lake-color-seam: #d9cfbc !important;
+    --cds-fizzy-lake-color-composer-ring: #d9cfbc !important;
+    --cds-fizzy-lake-color-banner-line: #d9cfbc !important;
+    --cds-fizzy-lake-color-badge-line: #d9cfbc !important;
+    --cds-fizzy-lake-color-message-line: #d9cfbc !important;
+  }
+
+  /* Starszy system kolorów (części strony, które go jeszcze używają) */
+  html[data-theme],
+  html[data-theme] body {
+    --bg-000: 41.3 40.0% 92.2% !important;
+    --bg-100: 42.0 55.6% 96.5% !important;
+    --bg-200: 41.3 40.0% 92.2% !important;
+    --bg-300: 46.2 68.6% 86.3% !important;
+    --bg-400: 46.2 68.6% 86.3% !important;
+    --bg-500: 40.8 38.5% 87.3% !important;
+    --text-000: 40.0 27.3% 12.9% !important;
+    --text-100: 40.0 27.3% 12.9% !important;
+    --text-200: 40.0 27.3% 12.9% !important;
+    --text-300: 37.5 13.2% 35.7% !important;
+    --text-400: 37.5 13.2% 35.7% !important;
+    --text-500: 37.5 13.2% 35.7% !important;
+    --border-100: 39.3 27.6% 79.4% !important;
+    --border-200: 39.3 27.6% 79.4% !important;
+    --border-300: 39.3 27.6% 79.4% !important;
+    --border-400: 39.3 27.6% 79.4% !important;
+    --accent-100: 45.1 77.3% 27.6% !important;
+  }
+
+  html body {
+    background-color: #fbf8f1 !important;
+    color: #2a2418 !important;
+  }
+
+  /* Linki w odpowiedziach */
+  .epitaxy-markdown a,
+  .font-claude-response a,
+  .prose a {
+    color: #7d6210 !important;
+    text-decoration-color: #7d6210 !important;
+  }
+
+  /* Obwódka fokusu przy nawigacji klawiaturą */
+  :focus-visible {
+    outline: 2px solid #7d6210 !important;
+    outline-offset: 2px !important;
+  }
+
+  /* Zaznaczony tekst */
+  ::selection {
+    background: #f4e9c4 !important;
+    color: #2a2418 !important;
+  }
+}

@@ -41,3 +41,13 @@ claude plugin install musztarda --marketplace skocz-hub/Musztarda
 W aplikacji na komputer, gdzie `/plugin` nie działa: kliknij + obok pola wiadomości, potem Plugins, Add marketplace z `skocz-hub/Musztarda`, a na końcu Add plugin.
 
 Aby wrócić do poprzedniego wyglądu, wybierz inny motyw w `/theme`.
+
+## Wersja dla przeglądarki (Stylus)
+
+Aplikacje Claude nie pozwalają zmieniać kolorów, ale w Chrome, Edge albo Firefoksie możesz nałożyć musztardowy wygląd na claude.ai rozszerzeniem **Stylus**:
+
+1. Zainstaluj rozszerzenie Stylus.
+2. Otwórz link [stylus/musztarda.user.css](https://raw.githubusercontent.com/skocz-hub/Musztarda/main/stylus/musztarda.user.css): Stylus pokaże stronę instalacji.
+3. Kliknij **Zainstaluj styl**.
+
+Styl zostaje na stałe i Stylus sam pobiera jego nowe wersje.
