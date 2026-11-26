@@ -6,7 +6,7 @@ Ciepły, musztardowy **jasny** motyw dla Claude Code (bez trybu ciemnego).
 | --- | --- |
 | Tło aplikacji | `#fbf8f1` (kremowe) |
 | Panele, karty, pole wiadomości | `#f3eee3` |
-| Linie i obramowania | `#d9cfbc` |
+| Linie i obramowania (pole wiadomości jest bez ramki) | `#d9cfbc` |
 | Główny tekst | `#2a2418` |
 | Tekst pomocniczy (daty, podpisy) | `#675e4f` |
 | Akcent (zawsze z ciemnym tekstem `#2a2418`) | `#ddc05d` |

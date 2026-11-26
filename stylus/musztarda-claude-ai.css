@@ -65,7 +65,7 @@ html #static-sidebar-skeleton {
   --cds-alpha-2: #d9cfbc !important;
   --cds-alpha-3: #c9bda6 !important;
   --cds-fizzy-lake-color-seam: #d9cfbc !important;
-  --cds-fizzy-lake-color-composer-ring: #d9cfbc !important;
+  --cds-fizzy-lake-color-composer-ring: transparent !important;
   --cds-fizzy-lake-color-banner-line: #d9cfbc !important;
   --cds-fizzy-lake-color-badge-line: #d9cfbc !important;
   --cds-fizzy-lake-color-message-line: #d9cfbc !important;
@@ -107,10 +107,29 @@ html body {
 }
 
 /* Obwódka fokusu przy nawigacji klawiaturą: tylko przyciski i linki.
-   Pole wiadomości ma własną, jedną cienką ramkę. */
+   Pole wiadomości nie ma żadnej ramki (reguła niżej). */
 :is(a, button, summary, [role="button"], [role="tab"], [role="menuitem"], [role="option"], [role="switch"], [role="checkbox"]):focus-visible {
   outline: 2px solid #7d6210 !important;
   outline-offset: 2px !important;
+}
+
+/* Pole wiadomości: bez ramki, bez obwódki i bez linii dzielących.
+   Pole odróżnia się od tła samym kolorem panelu (#f3eee3 na #fbf8f1). */
+#static-composer-box,
+#static-composer-box *:not(:focus-visible),
+fieldset:has(.ProseMirror, [contenteditable="true"]),
+fieldset:has(.ProseMirror, [contenteditable="true"]) *:not(:focus-visible),
+[data-testid="chat-input-grid-container"],
+[data-testid="chat-input-grid-container"] *:not(:focus-visible) {
+  border-color: transparent !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Pionowe i poziome kreski w pasku pola wiadomości */
+#static-composer-box :is(hr, [role="separator"], [class*="bg-border"]),
+fieldset:has(.ProseMirror, [contenteditable="true"]) :is(hr, [role="separator"], [class*="bg-border"]) {
+  background-color: transparent !important;
 }
 
 /* Zaznaczony tekst */
